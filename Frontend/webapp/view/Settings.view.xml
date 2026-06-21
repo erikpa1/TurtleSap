@@ -1,0 +1,27 @@
+<mvc:View
+  controllerName="sap.welcome.controller.Settings"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  xmlns:f="sap.ui.layout.form">
+
+  <Page id="settingsPage" title="{i18n>navSettings}" showNavButton="true" navButtonPress=".onNavBack" class="sapUiResponsiveContentPadding">
+    <f:SimpleForm
+      layout="ResponsiveGridLayout"
+      title="{i18n>settingsTitle}"
+      editable="true">
+      <f:content>
+        <Label text="Display name"/>
+        <Input value="Erik" placeholder="Enter your name"/>
+
+        <Label text="Notifications"/>
+        <Switch state="true"/>
+
+        <Label text="Theme"/>
+        <Select selectedKey="sap_horizon">
+          <core:Item key="sap_horizon" text="Morning Horizon" xmlns:core="sap.ui.core"/>
+          <core:Item key="sap_horizon_dark" text="Evening Horizon" xmlns:core="sap.ui.core"/>
+        </Select>
+      </f:content>
+    </f:SimpleForm>
+  </Page>
+</mvc:View>

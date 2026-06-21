@@ -1,0 +1,47 @@
+<mvc:View
+  controllerName="sap.welcome.controller.App"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.tnt"
+  xmlns:m="sap.m"
+  displayBlock="true"
+  height="100%">
+
+  <!-- ToolPage = SAP's "shell" layout: header + collapsible left side navigation + main content -->
+  <ToolPage id="toolPage">
+
+    <header>
+      <ToolHeader>
+        <m:Button
+          icon="sap-icon://menu2"
+          type="Transparent"
+          press=".onMenuButtonPress"
+          tooltip="Toggle navigation"/>
+        <m:ToolbarSpacer width="20px"/>
+        <m:Title text="{i18n>appTitle}" level="H1"/>
+        <m:ToolbarSpacer/>
+        <m:Button icon="sap-icon://log" type="Transparent" tooltip="Sign out"/>
+      </ToolHeader>
+    </header>
+
+    <sideContent>
+      <SideNavigation id="sideNavigation" itemSelect=".onItemSelect" expanded="true">
+        <NavigationList>
+          <NavigationListItem text="{i18n>navHome}" icon="sap-icon://home" key="home"/>
+          <NavigationListItem text="{i18n>navInfo}" icon="sap-icon://hint" key="info"/>
+          <NavigationListItem text="{i18n>navSettings}" icon="sap-icon://action-settings" key="settings"/>
+        </NavigationList>
+        <fixedItem>
+          <NavigationList>
+            <NavigationListItem text="{i18n>navHelp}" icon="sap-icon://sys-help" key="help"/>
+          </NavigationList>
+        </fixedItem>
+      </SideNavigation>
+    </sideContent>
+
+    <mainContents>
+      <!-- Routing targets are placed into this NavContainer (controlId "pageContainer") -->
+      <m:NavContainer id="pageContainer"/>
+    </mainContents>
+
+  </ToolPage>
+</mvc:View>

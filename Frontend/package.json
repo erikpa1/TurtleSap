@@ -1,0 +1,10 @@
+{
+  "name": "sap-welcome-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "OpenUI5 welcome app with left-bar (ToolPage) navigation, served with Bun",
+  "scripts": {
+    "start": "bun run server.ts",
+    "dev": "bun --watch server.ts"
+  }
+}

@@ -1,0 +1,17 @@
+<mvc:View
+  controllerName="sap.welcome.controller.Info"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m">
+
+  <Page id="infoPage" title="{i18n>navInfo}" showNavButton="true" navButtonPress=".onNavBack" class="sapUiResponsiveContentPadding">
+    <VBox class="sapUiSmallMargin">
+      <Title text="{i18n>infoTitle}" level="H2" class="sapUiSmallMarginBottom"/>
+      <Text text="{i18n>infoText}"/>
+      <List class="sapUiMediumMarginTop" headerText="What's in this starter">
+        <StandardListItem title="ToolPage layout" description="Header + collapsible left side navigation" icon="sap-icon://header"/>
+        <StandardListItem title="Routing" description="Hash-based navigation via manifest.json" icon="sap-icon://chain-link"/>
+        <StandardListItem title="i18n" description="Externalized texts in i18n.properties" icon="sap-icon://world"/>
+      </List>
+    </VBox>
+  </Page>
+</mvc:View>

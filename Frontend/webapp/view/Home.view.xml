@@ -1,0 +1,16 @@
+<mvc:View
+  controllerName="sap.welcome.controller.Home"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m">
+
+  <Page id="homePage" title="{i18n>navHome}" class="sapUiResponsiveContentPadding">
+    <IllustratedMessage
+      title="{i18n>welcomeTitle}"
+      description="{i18n>welcomeText}"
+      illustrationType="sapIllus-SuccessScreen">
+      <additionalContent>
+        <Button text="{i18n>welcomeButton}" type="Emphasized" press=".onGetStarted"/>
+      </additionalContent>
+    </IllustratedMessage>
+  </Page>
+</mvc:View>

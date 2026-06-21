@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAP Welcome App</title>
+
+  <!-- OpenUI5 bootstrap (loaded from the public CDN) -->
+  <script
+    id="sap-ui-bootstrap"
+    src="https://sdk.openui5.org/resources/sap-ui-core.js"
+    data-sap-ui-theme="sap_horizon"
+    data-sap-ui-resource-roots='{"sap.welcome": "./"}'
+    data-sap-ui-on-init="module:sap/ui/core/ComponentSupport"
+    data-sap-ui-compat-version="edge"
+    data-sap-ui-async="true"
+    data-sap-ui-libs="sap.m,sap.tnt,sap.ui.core">
+  </script>
+</head>
+<body class="sapUiBody">
+  <div
+    data-sap-ui-component
+    data-id="container"
+    data-name="sap.welcome"
+    data-height="100%">
+  </div>
+</body>
+</html>
