@@ -1,0 +1,9 @@
+ID;product;quantity;extendedPrice;shipperName;shippedDate;status
+10001;Pineapple;21;87.00;Fast Express;2026-02-14;Shipped
+10002;Milk;4;5.16;Slow Boat;2026-03-01;Open
+10003;Canned Beans;3;10.95;Fast Express;2026-01-20;Done
+10004;Salad;1;8.80;Speedy Logistics;2026-04-10;Open
+10005;Bread;2;2.30;Slow Boat;2026-02-28;Shipped
+10006;Avocado;9;33.21;Speedy Logistics;2026-05-05;Open
+10007;Coffee Beans;6;54.00;Fast Express;2026-03-18;Done
+10008;Olive Oil;2;24.50;Slow Boat;2026-04-22;Shipped
