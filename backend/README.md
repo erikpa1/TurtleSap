@@ -23,6 +23,14 @@ export PATH="$HOME/.npm-global/bin:/opt/homebrew/opt/openjdk@21/bin:/opt/homebre
 
 ```bash
 cd backend
+./run.sh              # default port 8080
+./run.sh 8081         # different port (e.g. if 8080 is taken)
+```
+
+`run.sh` exports the JDK 21 + Maven paths for you, so you don't need the
+manual `export` step above. To run Maven directly instead:
+
+```bash
 mvn spring-boot:run                                   # default port 8080
 mvn spring-boot:run -Dspring-boot.run.arguments=--server.port=8081   # if 8080 is taken
 ```
