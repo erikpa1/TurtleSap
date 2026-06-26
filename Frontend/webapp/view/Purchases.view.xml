@@ -1,0 +1,24 @@
+<mvc:View
+    controllerName="sap.welcome.controller.Info"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+>
+
+  <Page
+        id="purchasesPage"
+        title="{i18n>purchasesView}"
+        showNavButton="true"
+        navButtonPress=".onNavBack"
+        class="sapUiResponsiveContentPadding"
+    >
+    <VBox class="sapUiSmallMargin">
+      <Title
+                text="{i18n>infoTitle}"
+                level="H2"
+                class="sapUiSmallMarginBottom"
+            />
+      <Text text="{i18n>infoText}" />
+
+    </VBox>
+  </Page>
+</mvc:View>
