@@ -1,24 +1,42 @@
 <mvc:View
-    controllerName="sap.welcome.controller.Info"
+    controllerName="sap.welcome.controller.Invoices"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
 >
 
   <Page
-        id="infoPage"
-        title="{i18n>navInfo}"
-        showNavButton="true"
-        navButtonPress=".onNavBack"
+        id="invoicesPage"
+        title="{i18n>navInvoices}"
         class="sapUiResponsiveContentPadding"
     >
-    <VBox class="sapUiSmallMargin">
-      <Title
-                text="{i18n>infoTitle}"
-                level="H2"
-                class="sapUiSmallMarginBottom"
-            />
-      <Text text="{i18n>infoText}" />
-
-    </VBox>
+    <Table
+          id="invoicesTable"
+          items="{/Invoices}"
+          noDataText="{i18n>invoicesNoData}"
+      >
+      <columns>
+        <Column><Text text="{i18n>colProduct}" /></Column>
+        <Column hAlign="End"><Text text="{i18n>colQuantity}" /></Column>
+        <Column hAlign="End"><Text text="{i18n>colPrice}" /></Column>
+        <Column><Text text="{i18n>colShipper}" /></Column>
+        <Column><Text text="{i18n>colShippedDate}" /></Column>
+        <Column><Text text="{i18n>colStatus}" /></Column>
+      </columns>
+      <items>
+        <ColumnListItem>
+          <cells>
+            <Text text="{product}" />
+            <Text text="{quantity}" />
+            <ObjectNumber number="{extendedPrice}" unit="EUR" />
+            <Text text="{shipperName}" />
+            <Text text="{ path: 'shippedDate', type: 'sap.ui.model.type.Date', formatOptions: { source: { pattern: 'yyyy-MM-dd' } } }" />
+            <ObjectStatus
+                            text="{status}"
+                            state="{= ${status} === 'Open' ? 'Warning' : (${status} === 'Done' ? 'Success' : 'None') }"
+                        />
+          </cells>
+        </ColumnListItem>
+      </items>
+    </Table>
   </Page>
 </mvc:View>

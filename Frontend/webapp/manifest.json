@@ -8,6 +8,15 @@
     "description": "{{appDescription}}",
     "applicationVersion": {
       "version": "1.0.0"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/odata/v4/InvoiceService/",
+        "type": "OData",
+        "settings": {
+          "odataVersion": "4.0"
+        }
+      }
     }
   },
   "sap.ui": {
@@ -39,6 +48,14 @@
         "settings": {
           "bundleName": "sap.welcome.i18n.i18n"
         }
+      },
+      "": {
+        "dataSource": "mainService",
+        "settings": {
+          "operationMode": "Server",
+          "autoExpandSelect": true,
+          "earlyRequests": true
+        }
       }
     },
     "routing": {
@@ -52,11 +69,15 @@
       },
       "routes": [
         { "name": "home", "pattern": "", "target": "home" },
+        { "name": "invoices", "pattern": "invoices", "target": "invoices" },
+        { "name": "purchases", "pattern": "purchases", "target": "purchases" },
         { "name": "info", "pattern": "info", "target": "info" },
         { "name": "settings", "pattern": "settings", "target": "settings" }
       ],
       "targets": {
         "home": { "viewName": "Home" },
+        "invoices": { "viewName": "Invoices" },
+        "purchases": { "viewName": "Purchases" },
         "info": { "viewName": "Info" },
         "settings": { "viewName": "Settings" }
       }

@@ -42,7 +42,7 @@
           <NavigationListItem
             text="{i18n>navPurchasing}"
             icon="sap-icon://credit-card"
-            key="home"
+            key="purchases"
           />
 
           <NavigationListItem

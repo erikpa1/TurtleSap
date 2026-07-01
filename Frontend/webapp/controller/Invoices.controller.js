@@ -3,9 +3,6 @@ sap.ui.define([
 ], function (Controller) {
   "use strict";
 
-  return Controller.extend("sap.welcome.controller.Info", {
-    onNavBack: function () {
-      this.getOwnerComponent().getRouter().navTo("invoices");
-    }
+  return Controller.extend("sap.welcome.controller.Invoices", {
   });
 });
